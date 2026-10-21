@@ -1,0 +1,16 @@
+jobs:
+  build-express-smoke:
+    name: Build Express smoke-test image
+    timeoutSeconds: 600
+    maxAttempts: 1
+    commands:
+      - node --version
+      - npm ci
+      - npm test
+    containerImage:
+      name: express-smoke
+      registry: 461625528221.dkr.ecr.ap-south-1.amazonaws.com
+      repository: deploybench/backend
+      contextPath: .
+      dockerfilePath: Dockerfile
+      platform: linux/amd64
