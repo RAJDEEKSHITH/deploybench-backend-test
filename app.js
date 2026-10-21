@@ -12,5 +12,6 @@ app.get('/', (_req, res) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
+  console.log("testing ec2 image deployment")
   console.log(`Express smoke test listening on 0.0.0.0:${port}`);
 });
