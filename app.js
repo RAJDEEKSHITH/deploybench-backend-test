@@ -8,7 +8,7 @@ app.get('/health', (_req, res) => {
 });
 
 app.get('/', (_req, res) => {
-  res.status(200).send('DeployBench Express smoke test is running....');
+  res.status(200).send('DeployBench Express smoke test is running.......');
 });
 
 app.listen(port, '0.0.0.0', () => {
